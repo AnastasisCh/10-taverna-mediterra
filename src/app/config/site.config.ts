@@ -3,8 +3,8 @@ export type Culture = 'el' | 'en';
 
 export const SITE_CONFIG = {
   api: {
-    baseUrl: 'http://localhost:7191',
-    market: 'taverna-mediterra',
+    baseUrl: 'https://marketswebapi-gde3hpftfdhuawaj.westeurope-01.azurewebsites.net',
+    market: 'TavernaMediterra',
   },
   theme: {
     default: 'light' as Theme,
