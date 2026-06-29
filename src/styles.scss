@@ -1,0 +1,49 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --ocean-deep: #0A2744;
+  --ocean: #1A5276;
+  --ocean-light: #2E86C1;
+  --terracotta: #C1440E;
+  --terra-warm: #D4682A;
+  --terra-light: #E89060;
+  --olive: #4A5E2C;
+  --olive-light: #7A9A4A;
+  --sand: #F0DEC0;
+  --warm-white: #FEFAF3;
+  --linen: #F5EDE0;
+  --muted: #6E6050;
+  --font-serif: 'Lora', Georgia, serif;
+  --font-sans: 'Open Sans', system-ui, sans-serif;
+  --container: 1280px;
+  --transition: 0.35s ease;
+}
+
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-sans); color: var(--ocean-deep); background: var(--warm-white); line-height: 1.7; }
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+.container { max-width: var(--container); margin: 0 auto; padding: 0 3rem; }
+
+.btn {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.9rem 2.5rem; font-family: var(--font-sans);
+  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em;
+  text-transform: uppercase; border: none; cursor: pointer;
+  transition: var(--transition); border-radius: 0;
+}
+.btn-ocean { background: var(--ocean-deep); color: var(--warm-white); &:hover { background: var(--ocean); } }
+.btn-terra { background: var(--terracotta); color: var(--warm-white); &:hover { background: var(--terra-warm); } }
+.btn-outline { background: transparent; color: var(--ocean-deep); border: 2px solid var(--ocean-deep); &:hover { background: var(--ocean-deep); color: var(--warm-white); } }
+
+.section-label {
+  display: block; font-size: 0.65rem; font-weight: 600; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--terracotta); margin-bottom: 0.75rem;
+}
+.section-title {
+  font-family: var(--font-serif); font-size: clamp(2rem, 3.5vw, 3.2rem);
+  font-weight: 500; color: var(--ocean-deep); line-height: 1.25; margin-bottom: 1.25rem;
+  em { font-style: italic; color: var(--terracotta); font-weight: 400; }
+}
